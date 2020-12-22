@@ -22,5 +22,13 @@ setup(
     license='MIT',
     url='https://github.com/jinzitian/LSHCos',
     install_requires=['numpy'],
+    classifiers=[
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python',
+        'Programming Language :: Python :: 3',
+        'Topic :: Software Development :: Libraries',
+        ],
 
 )
