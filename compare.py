@@ -7,7 +7,7 @@
 import numpy as np     
 import time
 from lshash.lshash import LSHash
-from lsh import LSHCos
+from lshcos import LSHCos
      
 
 #####数据构造100w条数据

@@ -1,21 +1,21 @@
 # -*- coding: utf-8 -*-
 """
-@author: Jin Zitian
+@author: hedge_jzt@hotmail.com
 @time: 2020-12-21 16:55
 """
 
 import numpy as np
 
 class LSHCos(object):
-    def __init__(self, bucket_num, row_num, v_dim):
-        self.bucket_num = bucket_num
+    def __init__(self, band_num, row_num, v_dim):
+        self.band_num = band_num
         self.row_num = row_num
         self.hash_table = {}
         self.vector_idmap = {}
-        self.R = self.generate_R(bucket_num, row_num, v_dim)
+        self.R = self.generate_R(band_num, row_num, v_dim)
         
-    def generate_R(self, bucket_num, row_num, v_dim):
-        return np.random.randn(bucket_num * row_num, v_dim)
+    def generate_R(self, band_num, row_num, v_dim):
+        return np.random.randn(band_num * row_num, v_dim)
     
     @classmethod
     def cosine_similar(cls, a, b):
@@ -32,7 +32,7 @@ class LSHCos(object):
     
     def get_hash_buckets(self, signature):
         buckets = []
-        for i in range(self.bucket_num):
+        for i in range(self.band_num):
             b = ','.join([str(int(j)) for j in signature[i*self.row_num : (i+1)*self.row_num]])
             buckets.append(str(i) + '_' + b)
         return buckets
