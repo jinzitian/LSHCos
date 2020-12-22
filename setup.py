@@ -10,7 +10,7 @@ except ImportError:
     from distutils.core import setup
 
 
-with open('README.rst',encoding = 'utf-8') as f:
+with open('README.rst') as f:
     readme = f.read()
 
 with open('LICENSE.txt') as f:
