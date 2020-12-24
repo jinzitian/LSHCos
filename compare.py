@@ -86,6 +86,6 @@ for i in range(5000):
         b_cost += bb_cost
         if aa > bb:
             x += 1
-print('my better than git:{}'.format(x/s))
-print('my_cost:{}'.format(a_cost/s))
-print('git_cost:{}'.format(b_cost/s))
+print('a >= b prob:{}'.format(x/s))
+print('a_cost:{}'.format(a_cost/s))
+print('b_cost:{}'.format(b_cost/s))
